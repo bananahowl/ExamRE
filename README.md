@@ -1,3 +1,3 @@
-#traning1 project
-* This project is meant as start code for projects with security.
+#Exam Re project
+* This project is meant as backend code for exam project.
 
