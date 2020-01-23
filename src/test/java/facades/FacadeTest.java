@@ -20,8 +20,8 @@ import utils.EMF_Creator.DbSelector;
 import utils.EMF_Creator.Strategy;
 
 //Uncomment the line below, to temporarily disable this test
-//status on test. not done
-@Disabled
+//status on test. a bit set up
+//@Disabled
 public class FacadeTest {
 
     private static EntityManagerFactory emf;
@@ -113,6 +113,7 @@ public class FacadeTest {
             em.persist(booking1);
             em.persist(kayak1);
             em.persist(kayak2);
+            em.persist(kayak3);
             
             em.getTransaction().commit();
         } finally {

@@ -45,7 +45,7 @@ public class BookingOrderFacade {
     public long getKayakCount() {
         EntityManager em = emf.createEntityManager();
         try {
-            long kayatCount = (long) em.createQuery("SELECT COUNT(r) FROM KAYAK r").getSingleResult();
+            long kayatCount = (long) em.createQuery("SELECT COUNT(k) FROM Kayak k").getSingleResult();
             return kayatCount;
         } finally {
             em.close();

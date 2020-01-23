@@ -22,7 +22,7 @@ import javax.persistence.OneToMany;
  * @author ahmed
  */
 @Entity
-@NamedQuery(name = "Image.deleteAllRows", query = "DELETE from Image")
+//@NamedQuery(name = "Image.deleteAllRows", query = "DELETE from Image")
 public class Image implements Serializable {
 
     private static final long serialVersionUID = 1L;

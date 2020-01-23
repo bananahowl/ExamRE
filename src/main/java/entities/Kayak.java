@@ -22,7 +22,7 @@ import javax.persistence.OneToMany;
  * @author ahmed
  */
 @Entity
-@NamedQuery(name = "Kayak.deleteAllRows", query = "DELETE from Kayak")
+//@NamedQuery(name = "Kayak.deleteAllRows", query = "DELETE from Kayak")
 public class Kayak implements Serializable {
 
     private static final long serialVersionUID = 1L;
