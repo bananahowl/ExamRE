@@ -44,6 +44,7 @@ public class KayakOrderResource {
         return "{\"count\":"+count+"}";  //Done manually so no need for a DTO
     }
     
+    
     @Path("all/kayak")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
