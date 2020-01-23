@@ -1,6 +1,6 @@
 package facades;
 
-import entities.RenameMe;
+import entities.Booking;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,13 +10,13 @@ import javax.persistence.Persistence;
  *
  * Rename Class to a relevant name Add add relevant facade methods
  */
-public class FacadeExample {
+public class BookingOrderFacade {
 
-    private static FacadeExample instance;
+    private static BookingOrderFacade instance;
     private static EntityManagerFactory emf;
     
     //Private Constructor to ensure Singleton
-    private FacadeExample() {}
+    private BookingOrderFacade() {}
     
     
     /**
@@ -24,10 +24,10 @@ public class FacadeExample {
      * @param _emf
      * @return an instance of this facade class.
      */
-    public static FacadeExample getFacadeExample(EntityManagerFactory _emf) {
+    public static BookingOrderFacade getFacadeExample(EntityManagerFactory _emf) {
         if (instance == null) {
             emf = _emf;
-            instance = new FacadeExample();
+            instance = new BookingOrderFacade();
         }
         return instance;
     }
@@ -37,15 +37,29 @@ public class FacadeExample {
     }
     
     //TODO Remove/Change this before use
-    public long getRenameMeCount(){
+    public long getKayakCount(){
         EntityManager em = emf.createEntityManager();
         try{
-            long renameMeCount = (long)em.createQuery("SELECT COUNT(r) FROM RenameMe r").getSingleResult();
-            return renameMeCount;
+            long kayatCount = (long)em.createQuery("SELECT COUNT(r) FROM KAYAK r").getSingleResult();
+            return kayatCount;
         }finally{  
             em.close();
         }
         
     }
+    
+//    public Booking addBooking(){
+//    EntityManager em = emf.createEntityManager();
+//    
+//    try{
+//    em.getTransaction().begin();
+//        
+//    }finally{
+//    em.close();
+//    }
+//    
+//    
+//    }
 
+    
 }

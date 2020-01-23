@@ -6,7 +6,8 @@ import javax.persistence.EntityManagerFactory;
 import errorhandling.AuthenticationException;
 
 /**
- * @author lam@cphbusiness.dk
+ *
+ * changed by Ahmed
  */
 public class UserFacade {
   
@@ -41,5 +42,6 @@ public class UserFacade {
         }
         return user;
     }
-
+    
+    
 }
