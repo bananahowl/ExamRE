@@ -14,6 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 /**
@@ -21,6 +22,7 @@ import javax.persistence.OneToMany;
  * @author ahmed
  */
 @Entity
+@NamedQuery(name = "Image.deleteAllRows", query = "DELETE from Image")
 public class Image implements Serializable {
 
     private static final long serialVersionUID = 1L;

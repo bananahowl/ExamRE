@@ -14,6 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 /**
@@ -21,6 +22,7 @@ import javax.persistence.OneToMany;
  * @author ahmed
  */
 @Entity
+@NamedQuery(name = "Kayak.deleteAllRows", query = "DELETE from Kayak")
 public class Kayak implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -40,8 +42,8 @@ public class Kayak implements Serializable {
     
     private int personsAllowed;
     
-    @OneToMany(mappedBy = "kayakB",cascade = CascadeType.PERSIST)
-    private List<Booking> BookingList = new ArrayList();
+    @OneToMany(mappedBy = "kayakIDB",cascade = CascadeType.PERSIST)
+    private List<Booking> bookingList = new ArrayList();
     
     @OneToMany(mappedBy = "kayakID",cascade = CascadeType.PERSIST)
     private List<Image> images = new ArrayList();
@@ -115,11 +117,15 @@ public class Kayak implements Serializable {
     }
 
     public List<Booking> getBookingList() {
-        return BookingList;
+        return bookingList;
     }
 
     public void setBookingList(List<Booking> BookingList) {
-        this.BookingList = BookingList;
+        this.bookingList = BookingList;
+    }
+    
+    public void addBooking(Booking book){
+        bookingList.add(book);
     }
 
     public List<Image> getImages() {

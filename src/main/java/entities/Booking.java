@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-//@NamedQuery(name = "Booking.deleteAllRows", query = "DELETE from Booking")
+@NamedQuery(name = "Booking.deleteAllRows", query = "DELETE from Booking")
 public class Booking implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -72,7 +72,11 @@ public class KayakDTO {
     public List<Image> getImages() {
         return images;
     }
-    
+
+    @Override
+    public String toString() {
+        return "KayakDTO{" + "name=" + name + ", model=" + model + ", desciption=" + desciption + ", age=" + age + ", PersonAmount=" + PersonAmount + ", images=" + images + '}';
+    }
     
     
 }
